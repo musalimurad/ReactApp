@@ -1,0 +1,43 @@
+@use '../../scss/breakpoint'as *;
+@use '../../scss/variables'as *;
+
+.section {
+    .section__header {
+        margin: 26px 0;
+    }
+}
+
+.movie-list {
+    .swiper-slide {
+        width: 20%;
+        border-radius: $border-radius;
+
+        img {
+            height: 380px;
+            transition: .5s;
+            border-radius: $border-radius;
+
+        }
+
+        &:hover {
+
+            img {
+                transform: scale(1.1);
+                overflow: hidden;
+                outline: none;
+                border-radius: $border-radius;
+
+                cursor: pointer;
+                filter: blur(3px) brightness(0.4);
+            }
+        }
+
+        @include tablet {
+            width: 30%;
+        }
+
+        @include mobile {
+            width: 40%;
+        }
+    }
+}
